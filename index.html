@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Reproductor de video</title>
+</head>
+<body>
+    <h1>🎥 Reproductor de Vídeo Personalizado</h1>
+
+    <div class="video-list">
+      <select id="videoSelector">
+        <option value="video1.mp4">Video 1</option>
+        <option value="video2.mp4">Video 2</option>
+        <option value="video3.mp4">Video 3</option>
+      </select>
+    </div>
+  
+    <video id="video" width="640" height="360">
+      <source src="video1.mp4" type="video/mp4">
+      <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español" default>
+      Tu navegador no soporta la etiqueta video.
+    </video>
+  
+    <div class="controls">
+      <button id="play">▶️</button>
+      <button id="pause">⏸️</button>
+      <button id="mute">🔇</button>
+      <button id="volUp">🔊+</button>
+      <button id="volDown">🔉-</button>
+      <button id="speedUp">⏩+</button>
+      <button id="speedDown">⏪-</button>
+      <button id="sizeUp">🔍+</button>
+      <button id="sizeDown">🔍-</button>
+      <input id="progress" type="range" min="0" value="0">
+      <button id="prev">⏮️</button>
+      <button id="next">⏭️</button>
+      <button id="capture">📸</button>
+    </div>
+  
+    <canvas id="canvas"></canvas>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
